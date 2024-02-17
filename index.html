@@ -19,8 +19,8 @@
                         'seatColor': '#03071280',
                         'inputTextColor': '#03071266',
                         'menuBarColor': '#030712B3',
-                        'bgGradientDark': '#03071280',
-                        'bgGradientDarker': '#03071200',
+                        // 'bgGradientDark': '#03071280',
+                        // 'bgGradientDarker': '#03071200',
                     },
                     backgroundImage: {
                         'bannerPhoto': "url('/images/banner.png')",
@@ -35,7 +35,7 @@
 
 <body>
     <!-- header section  -->
-    <header class="w-10/12 mx-auto mt-6 mb-28">
+    <header class="w-10/12 mx-auto mt-6 mb-16">
         <!-- nav bar part  -->
         <nav class="navbar font-raleway p-0 bg-base-100">
             <div class="navbar-start">
@@ -75,13 +75,9 @@
                 </button>
             </div>
         </nav>
-
-        <!-- banner part  -->
-        <!-- bg-gradient-to-r
-    from-bgGradientDarker via-bgGradientDark to-bgGradientDarker -->
         <section
-            class="bg-[url('/images/banner.png')] bg-contain bg-no-repeat min-h-[550px] min-w-full text-white mt-8 flex items-center justify-center">
-            <div class="w-8/12 text-center space-y-8 absolute">
+            class="bg-[url('/images/banner.png')] bg-no-repeat bg-contain bg-center min-h-[550px] text-white mt-8 flex items-center justify-center">
+            <div class="w-8/12 text-center space-y-8">
                 <h1 class="text-6xl font-extrabold">End-to-End Travel with <br><span class="text-primaryColor">P
                         Paribahan</span></h1>
                 <p class="text-lg">Experience hassle-free end-to-end travel with P Paribahan. Trustworthy and efficient
@@ -91,39 +87,79 @@
                 <button
                     class="bg-primaryColor border-none text-primaryTitleColor text-xl font-bold px-7 py-5 rounded-xl content-center">Buy
                     Tickets</button>
-                <!-- border badge -->
-                <div class="flex gap-5 relative -bottom-20">
-                    <div
-                        class="bg-white flex px-8 items-center justify-center py-7 rounded-3xl gap-4 text-center border-b-2 border-primaryColor">
-                        <img src="images/people.png" alt="">
-                        <div>
-                            <h1 class="text-primaryTitleColor text-4xl font-bold">500K+</h1>
-                            <p class="text-primaryDesColor">Registered users</p>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-white flex px-8 items-center justify-center py-7 rounded-3xl gap-4 text-center border-b-2 border-primaryColor">
-                        <img src="images/ticket-cupon.png" alt="">
-                        <div>
-                            <h1 class="text-primaryTitleColor text-4xl font-bold">500K+</h1>
-                            <p class="text-primaryDesColor">Tickets sold</p>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-white flex px-8 items-center justify-center py-7 rounded-3xl gap-4 text-center border-b-2 border-primaryColor">
-                        <img src="images/stoppage.png" alt="">
-                        <div>
-                            <h1 class="text-primaryTitleColor text-4xl font-bold">500K+</h1>
-                            <p class="text-primaryDesColor">Rental Partners</p>
-                        </div>
-                    </div>
+            </div>
+        </section>
+        <!-- header badge  -->
+        <section class="flex justify-center gap-5 relative bottom-16">
+            <div
+                class="bg-white flex px-8 items-center justify-center py-7 rounded-3xl gap-4 text-center border-b-2 border-primaryColor">
+                <img src="images/people.png" alt="">
+                <div>
+                    <h1 class="text-primaryTitleColor text-4xl font-bold">500K+</h1>
+                    <p class="text-primaryDesColor">Registered users</p>
+                </div>
+            </div>
+            <div
+                class="bg-white flex px-8 items-center justify-center py-7 rounded-3xl gap-4 text-center border-b-2 border-primaryColor">
+                <img src="images/ticket-cupon.png" alt="">
+                <div>
+                    <h1 class="text-primaryTitleColor text-4xl font-bold">500K+</h1>
+                    <p class="text-primaryDesColor">Tickets sold</p>
+                </div>
+            </div>
+            <div
+                class="bg-white flex px-8 items-center justify-center py-7 rounded-3xl gap-4 text-center border-b-2 border-primaryColor">
+                <img src="images/stoppage.png" alt="">
+                <div>
+                    <h1 class="text-primaryTitleColor text-4xl font-bold">500K+</h1>
+                    <p class="text-primaryDesColor">Rental Partners</p>
                 </div>
             </div>
         </section>
     </header>
     <!-- main section start  -->
     <main>
+        <!-- best offers section  -->
+        <section class="w-10/12 mx-auto">
+            <h1 class="text-center text-[40px] font-bold text-primaryTitleColor font-raleway mb-12">Best offers for you
+            </h1>
+            <!-- card part  -->
+            <div class="lg:flex lg:justify-center gap-6">
+                <div class="lg:flex items-center w-full bg-[#FFBF0F] px-12 rounded-3xl">
+                    <div class="font-inter flex-1">
+                        <h1 class="text-[40px] font-[900] text-[#030712CC]">15% OFF</h1>
+                        <p class="text-[#030712CC] text-xl font-semibold">on your next purchase</p>
+                        <p class="text-lg font-medium text-seatColor">use by January 2024</p>
+                    </div>
+                    <img class="hidden lg:block" src="images/cupon-devider.png" alt="">
+                    <div class="font-raleway w-1/3">
+                        <h1 class="text-[32px] font-bold text-primaryTitleColor">NEW15</h1>
+                        <p class="text-[#03071266] text-xl font-medium">Coupon Code</p>
+                    </div>
+                </div>
+                <div class="lg:flex mt-12 lg:mt-0 items-center w-full bg-[#F78C9C] px-12 rounded-3xl">
+                    <div class="font-inter flex-1">
+                        <h1 class="text-[40px] font-[900] text-[#030712CC]">20% OFF</h1>
+                        <p class="text-[#030712CC] text-xl font-semibold">on your next purchase</p>
+                        <p class="text-lg font-medium text-seatColor">use by January 2024</p>
+                    </div>
+                    <img class="hidden lg:block" src="images/cupon-devider.png" alt="">
+                    <div class="font-raleway w-1/3">
+                        <h1 class="text-[32px] font-bold text-primaryTitleColor">Couple 20</h1>
+                        <p class="text-[#03071266] text-xl font-medium">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-16">
+                <button
+                    class="px-8 py-5 border border-primaryColor rounded-xl text-primaryColor text-xl font-bold font-raleway">See
+                    All Offers</button>
+            </div>
+        </section>
+        <!-- P H paribahan section  -->
+        <section class="mt-28">
 
+        </section>
     </main>
     <!-- footer section  -->
     <footer>
