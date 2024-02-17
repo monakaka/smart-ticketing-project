@@ -8,14 +8,115 @@
     <!-- tailwind and daisyUI link  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primaryColor': '#1DD100',
+                        'primaryTitleColor': '#030712',
+                        'primaryDesColor': '#03071299',
+                        'seatColor': '#03071280',
+                        'inputTextColor': '#03071266',
+                        'menuBarColor': '#030712B3',
+                        'bgGradientDark': '#03071280',
+                        'bgGradientDarker': '#03071200',
+                    },
+                    backgroundImage: {
+                        'bannerPhoto': "url('/images/banner.png')",
+                    }
+                }
+            }
+        }
+    </script>
     <!-- row css style file  -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <!-- header section  -->
-    <header>
+    <header class="w-10/12 mx-auto">
+        <!-- nav bar part  -->
+        <nav class="navbar font-raleway mt-6 p-0 bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="pe-4 lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box text-menuBarColor font-medium text-lg w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="text-xl lg:text-4xl font-extrabold text-primaryTitleColor">P-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-menuBarColor font-medium text-lg">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Pages</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end flex justify-end items-center gap-x-6">
+                <i class="fa-solid fa-magnifying-glass w-6 text-[#89898B] hidden lg:block"></i>
+                <button
+                    class="flex items-center gap-x-[10px] text-primaryColor text-base lg:text-xl font-bold bg-[#1DD1001A] border border-[#1DD10066] py-1 px-5 lg:py-3 lg:px-6 rounded-lg">Bus
+                    <img src="images/bus-icon.png" alt="">
+                </button>
+            </div>
+        </nav>
 
+        <!-- banner part  -->
+        <!-- bg-gradient-to-r
+    from-bgGradientDarker via-bgGradientDark to-bgGradientDarker -->
+        <section
+            class="bg-bannerPhoto bg-contain bg-no-repeat min-h-[550px] min-w-full text-white mt-8 flex items-center justify-center">
+            <div class="w-8/12 text-center space-y-8 absolute">
+                <h1 class="text-6xl font-extrabold">End-to-End Travel with <br><span class="text-primaryColor">P
+                        Paribahan</span></h1>
+                <p class="text-lg">Experience hassle-free end-to-end travel with P Paribahan. Trustworthy and efficient
+                    service for all your journey
+                    requirements.
+                </p>
+                <button
+                    class="bg-primaryColor border-none text-primaryTitleColor text-xl font-bold px-7 py-5 rounded-xl content-center">Buy
+                    Tickets</button>
+                <!-- border badge -->
+                <div class="flex gap-5 relative -bottom-20">
+                    <div class="bg-white flex px-8 items-center justify-center py-7 rounded-3xl gap-4 text-center">
+                        <img src="images/people.png" alt="">
+                        <div>
+                            <h1 class="text-primaryTitleColor text-4xl font-bold">500K+</h1>
+                            <p class="text-primaryDesColor">Registered users</p>
+                        </div>
+                    </div>
+                    <div class="bg-white flex px-8 items-center justify-center py-7 rounded-3xl gap-4 text-center">
+                        <img src="images/ticket-cupon.png" alt="">
+                        <div>
+                            <h1 class="text-primaryTitleColor text-4xl font-bold">500K+</h1>
+                            <p class="text-primaryDesColor">Tickets sold</p>
+                        </div>
+                    </div>
+                    <div class="bg-white flex px-8 items-center justify-center py-7 rounded-3xl gap-4 text-center">
+                        <img src="images/stoppage.png" alt="">
+                        <div>
+                            <h1 class="text-primaryTitleColor text-4xl font-bold">500K+</h1>
+                            <p class="text-primaryDesColor">Rental Partners</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
     <!-- main section start  -->
     <main>
