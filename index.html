@@ -19,6 +19,7 @@
                         'seatColor': '#03071280',
                         'inputTextColor': '#03071266',
                         'menuBarColor': '#030712B3',
+                        'primaryBgColor': '#F7F8F8',
                         // 'bgGradientDark': '#03071280',
                         // 'bgGradientDarker': '#03071200',
                     },
@@ -125,7 +126,7 @@
             </h1>
             <!-- card part  -->
             <div class="lg:flex lg:justify-center gap-6">
-                <div class="lg:flex items-center w-full bg-[#FFBF0F] px-12 rounded-3xl">
+                <div class="lg:flex items-center flex-1 bg-[#FFBF0F] px-12 rounded-3xl">
                     <div class="font-inter flex-1">
                         <h1 class="text-[40px] font-[900] text-[#030712CC]">15% OFF</h1>
                         <p class="text-[#030712CC] text-xl font-semibold">on your next purchase</p>
@@ -137,7 +138,7 @@
                         <p class="text-[#03071266] text-xl font-medium">Coupon Code</p>
                     </div>
                 </div>
-                <div class="lg:flex mt-12 lg:mt-0 items-center w-full bg-[#F78C9C] px-12 rounded-3xl">
+                <div class="lg:flex mt-12 lg:mt-0 items-center flex-1 bg-[#F78C9C] px-12 rounded-3xl">
                     <div class="font-inter flex-1">
                         <h1 class="text-[40px] font-[900] text-[#030712CC]">20% OFF</h1>
                         <p class="text-[#030712CC] text-xl font-semibold">on your next purchase</p>
@@ -157,7 +158,7 @@
             </div>
         </section>
         <!-- P H paribahan section  -->
-        <section class="bg-[#F7F8F8] border-t-2 rounded-[80px] border-primaryColor mt-28">
+        <section class="bg-primaryBgColor border-t-2 rounded-[80px] border-primaryColor mt-28">
             <!-- p.h info part  -->
             <div class="w-10/12 mt-28 m-6 mx-auto">
                 <h1 class="text-center text-[40px] font-bold text-primaryTitleColor font-raleway">P.H Paribahan
@@ -186,7 +187,7 @@
                         </div>
 
                         <!-- routed part  -->
-                        <div class="bg-[#F7F8F8] p-8 rounded-3xl mt-6">
+                        <div class="bg-primaryBgColor p-8 rounded-3xl mt-6">
                             <div
                                 class="flex justify-between font-raleway border-b-2 pb-4 border-dashed text-lg font-semibold">
                                 <p class="text-primaryDesColor">Route</p>
@@ -221,8 +222,266 @@
                 </div>
             </div>
             <!-- p.h seats part  -->
-            <div>
-                <h1>you have to do the seats here cause of bg color</h1>
+            <div class=" w-10/12 mx-auto p-8 rounded-3xl bg-white lg:flex gap-8">
+                <!-- seats side  -->
+                <div class="border-e-2 border-dashed border-gray-300 w-3/5 pr-8">
+                    <h3
+                        class="font-raleway font-semibold text-2xl text-primaryTitleColor border-b-2 border-dashed border-gray-300 pb-6">
+                        Select Your Seat</h3>
+                    <div class=" flex justify-between items-center border-b-2 border-dashed border-gray-300 py-5">
+                        <p class="flex items-center">
+                            <img class="border-2 rounded-md border-gray-300 border-dashed" src="images/seat-gray.png"
+                                alt="">
+                            <span class="text-seatColor font-medium font-inter text-lg">Available</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <img class="border-2 rounded-md border-gray-300 border-dashed" src="images/seat-green.png"
+                                alt="">
+                            <span class="font-inter font-medium text-lg text-primaryColor">Selected</span>
+                        </p>
+                    </div>
+
+                    <!-- all seats are here  -->
+                    <div class="mt-6">
+                        <div class="flex justify-end">
+                            <button id="seat-btn"
+                                class="flex justify-center rounded-xl bg-[#0307121A] text-seatColor font-inter font-medium text-lg py-4 px-10       "><img
+                                    src="images/wheeler.png" alt=""></button>
+                        </div>
+                        <div class="flex justify-center items-center mt-6">
+                            <p class="me-4">A</p>
+                            <div class="flex flex-1 gap-8">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">A1</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">A2</button>
+                            </div>
+                            <div class="flex flex-1 gap-8 ml-16">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">A3</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">A4</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center mt-6">
+                            <p class="me-4">B</p>
+                            <div class="flex flex-1 gap-8">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">B1</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">B2</button>
+                            </div>
+                            <div class="flex flex-1 gap-8 ml-16">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">B3</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">B4</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center mt-6">
+                            <p class="me-4">C</p>
+                            <div class="flex flex-1 gap-8">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">C1</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">C2</button>
+                            </div>
+                            <div class="flex flex-1 gap-8 ml-16">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">C3</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">C4</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center mt-6">
+                            <p class="me-4">D</p>
+                            <div class="flex flex-1 gap-8">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">D1</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">D2</button>
+                            </div>
+                            <div class="flex flex-1 gap-8 ml-16">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">D3</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">D4</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center mt-6">
+                            <p class="me-4">E</p>
+                            <div class="flex flex-1 gap-8">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">E1</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">E2</button>
+                            </div>
+                            <div class="flex flex-1 gap-8 ml-16">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">E3</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">E4</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center mt-6">
+                            <p class="me-4">F</p>
+                            <div class="flex flex-1 gap-8">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">F1</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">F2</button>
+                            </div>
+                            <div class="flex flex-1 gap-8 ml-16">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">F3</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">F4</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center mt-6">
+                            <p class="me-4">G</p>
+                            <div class="flex flex-1 gap-8">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">G1</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">G2</button>
+                            </div>
+                            <div class="flex flex-1 gap-8 ml-16">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">G3</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">G4</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center mt-6">
+                            <p class="me-4">H</p>
+                            <div class="flex flex-1 gap-8">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">H1</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">H2</button>
+                            </div>
+                            <div class="flex flex-1 gap-8 ml-16">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">H3</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">H4</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center mt-6">
+                            <p class="me-4">I</p>
+                            <div class="flex flex-1 gap-8">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">I1</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">
+                                    <Img:sizes></Img:sizes>2
+                                </button>
+                            </div>
+                            <div class="flex flex-1 gap-8 ml-16">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">I3</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">I4</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center mt-6">
+                            <p class="me-4">J</p>
+                            <div class="flex flex-1 gap-8">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">J1</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">J2</button>
+                            </div>
+                            <div class="flex flex-1 gap-8 ml-16">
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">J3</button>
+                                <button id="seat-btn"
+                                    class="flex flex-1 items-center justify-center rounded-xl bg-primaryBgColor text-seatColor font-inter font-medium text-lg py-4 px-10">J4</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- info side  -->
+                <div class="flex-1">
+                    <h3
+                        class="font-raleway font-semibold text-2xl text-primaryTitleColor border-b-2 border-dashed border-gray-300 pb-6">
+                        Select Your Seat</h3>
+                    <div class="bg-primaryBgColor p-8 mt-6 rounded-xl">
+                        <p
+                            class="font-inter font-medium text-base text-primaryTitleColor flex justify-between pb-4 border-b border-dashed border-[#03071233]">
+                            <span>Seat<sup
+                                    class="bg-primaryColor text-white px-2 rounded-lg ml-1">2</sup></span><span>Class</span><span>Price</span>
+                        </p>
+                        <!-- selected seats zone  -->
+                        <div
+                            class="font-inter text-base text-seatColor mt-5 space-y-4 pb-3 border-b-2 border-[#03071233]">
+                            <div class="flex justify-between items-center">
+                                <p id="seat-num">C2</p>
+                                <p>Economy</p>
+                                <p id="">550</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p id="seat-num">C2</p>
+                                <p>Economy</p>
+                                <p id="">550</p>
+                            </div>
+                        </div>
+                        <!-- total price zone  -->
+                        <div class="flex justify-between mt-2 font-inter font-medium text-base text-primaryTitleColor">
+                            <p>Total Price</p>
+                            <p>BDT <span id="total-price">0</span></p>
+                        </div>
+                        <!-- coupon entry field  -->
+                        <div class="flex mt-4 relative">
+                            <input type="text" class="w-full text-[#03071266] rounded-xl px-5 py-4" name=""
+                                id="coupon-field" placeholder="Have any coupon?">
+                            <button onclick="applyCoupon()"
+                                class="text-white font-semibold text-base rounded-xl px-4 py-2 bg-primaryColor absolute end-2 top-2 bottom-2">
+                                Apply
+                            </button>
+                        </div>
+                        <!-- grand total part  -->
+                        <div class="flex justify-between mt-4 font-inter font-medium text-base text-primaryTitleColor">
+                            <p>Grand Total</p>
+                            <p>BDT <span id="total-price">0</span></p>
+                        </div>
+                    </div>
+                    <!-- passanger details part  -->
+                    <div class="mt-6 space-y-6">
+                        <div>
+                            <h2 class="font-inter font-semibold text-base text-primaryTitleColor">Passenger
+                                Name<sup>*</sup></h2>
+                            <input type="text"
+                                class="w-full border border-[#0307121A] rounded-xl text-[#03071266] font-inter text-base mt-4 p-5"
+                                name="" id="" placeholder="Enter your name" required>
+                        </div>
+                        <div>
+                            <h2 class="font-inter font-semibold text-base text-primaryTitleColor">Phone
+                                Number<sup>*</sup></h2>
+                            <input type="text"
+                                class="w-full border border-[#0307121A] rounded-xl text-[#03071266] font-inter text-base mt-4 p-5"
+                                name="" id="" placeholder="Enter your name" required>
+                        </div>
+                        <div>
+                            <h2 class="font-inter font-semibold text-base text-primaryTitleColor">Email ID</h2>
+                            <input type="text"
+                                class="w-full border border-[#0307121A] rounded-xl text-[#03071266] font-inter text-base mt-4 p-5"
+                                name="" id="" placeholder="Enter your name">
+                        </div>
+                        <button
+                            class="font-raleway font-extrabold text-xl text-white bg-primaryColor w-full py-5 px-8 rounded-2xl">Next</button>
+                    </div>
+                    <!-- terms condition part  -->
+                    <div class="flex justify-around mt-6">
+                        <p class="border-b-2 border-gray-400 text-[#03071299] font-inter text-base">Terms and
+                            Condition
+                        </p>
+                        <p class="border-b-2 border-gray-400 text-[#03071299] font-inter text-base">Cancellation
+                            Policy
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
