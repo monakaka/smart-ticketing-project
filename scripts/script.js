@@ -10,6 +10,7 @@ for (let seat of allSeats) {
         const selectedBtn = e.target;
         selectedBtn.classList.add('bg-primaryColor')
 
+
         // set rest seats
         const newRestSeats = restSeats - 1;
         setElement('rest-seat', newRestSeats);
@@ -22,15 +23,37 @@ for (let seat of allSeats) {
         // seat details set and create function call
         seatDetails(seatName);
 
-        // total price calculation 
-        const previousTotalPrice = getElementNumberId('total-price');
-        const newTotalPrice = previousTotalPrice + 550;
-        setElement('total-price', newTotalPrice);
-
-        // grand total calculation 
+        // total price calculation
+        totalPriceCalculation();
 
     })
 }
+
+// total price calculation 
+function totalPriceCalculation() {
+    const previousTotalPrice = getElementNumberId('total-price');
+    const newTotalPrice = previousTotalPrice + 550;
+    setElement('total-price', newTotalPrice);
+    setElement('grand-total', newTotalPrice);
+}
+
+// coupon calculation function
+document.getElementById('coupon-btn').addEventListener('click', function () {
+    const couponField = document.getElementById('coupon-field');
+    const couponCode = couponField.value;
+    const totalPrice = getElementNumberId('total-price');
+    if (couponCode === 'NEW15') {
+        const discount = totalPrice * 15 / 100;
+        const grandPrice = totalPrice - discount;
+        setElement('grand-total', grandPrice);
+    }
+    else if (couponCode === 'Couple 20') {
+        const discount = totalPrice * 20 / 100;
+        const grandPrice = totalPrice - discount;
+        setElement('grand-total', grandPrice);
+    }
+})
+
 
 // seat details create function
 function seatDetails(seatName) {
@@ -58,7 +81,7 @@ function getElementNumberId(id) {
 }
 
 
-// here i set rest seats 
+// set element 
 function setElement(elementId, value) {
     const restSeatsBox = document.getElementById(elementId);
     restSeatsBox.innerText = value;

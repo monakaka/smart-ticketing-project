@@ -427,7 +427,7 @@
                         <div class="flex mt-4 relative">
                             <input type="text" class="w-full text-[#03071266] rounded-xl px-5 py-4" name=""
                                 id="coupon-field" placeholder="Have any coupon?">
-                            <button onclick="applyCoupon()"
+                            <button id="coupon-btn"
                                 class="text-white font-semibold text-base rounded-xl px-4 py-2 bg-primaryColor absolute end-2 top-2 bottom-2">
                                 Apply
                             </button>
@@ -435,7 +435,7 @@
                         <!-- grand total part  -->
                         <div class="flex justify-between mt-4 font-inter font-medium text-base text-primaryTitleColor">
                             <p>Grand Total</p>
-                            <p>BDT <span id="total-price">0</span></p>
+                            <p>BDT <span id="grand-total">0</span></p>
                         </div>
                     </div>
                     <!-- passanger details part  -->
@@ -475,9 +475,6 @@
                 </div>
             </div>
         </section>
-
-
-
     </main>
     <!-- footer section  -->
     <footer>
