@@ -6,9 +6,13 @@ for (let seat of allSeats) {
         const selectedSeatsCount = getElementNumberId('selected-seat-count');
         const seatName = e.target.innerText;
 
+        // set selected-Bg-color 
+        const selectedBtn = e.target;
+        selectedBtn.classList.add('bg-primaryColor')
+
         // set rest seats
         const newRestSeats = restSeats - 1;
-        setElement('rest-seat', newRestSeats)
+        setElement('rest-seat', newRestSeats);
 
         // set selected total seats 
         const newSelectedSeats = selectedSeatsCount + 1;
@@ -17,6 +21,13 @@ for (let seat of allSeats) {
 
         // seat details set and create function call
         seatDetails(seatName);
+
+        // total price calculation 
+        const previousTotalPrice = getElementNumberId('total-price');
+        const newTotalPrice = previousTotalPrice + 550;
+        setElement('total-price', newTotalPrice);
+
+        // grand total calculation 
 
     })
 }
