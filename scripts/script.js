@@ -36,8 +36,9 @@ for (let seat of allSeats) {
 
         // set selected-Bg-color 
         const selectedBtn = e.target;
-        selectedBtn.classList.add('bg-primaryColor')
-        selectedBtn.classList.add('text-white')
+        selectedBtn.classList.add('bg-primaryColor');
+        selectedBtn.classList.add('text-white');
+        selectedBtn.classList.add('pointer-events-none');
 
         // seat details set and create function call
         seatDetails(seatName);
