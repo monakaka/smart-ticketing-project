@@ -1,4 +1,13 @@
+// buy tickets btn navigation 
+document.getElementById('buy-ticket-btn').addEventListener('click', function () {
+    const paribahan = document.getElementById('paribahan');
+    paribahan.scrollIntoView({ behavior: "smooth" });
+})
+
+
+// seats click function 
 const allSeats = document.getElementsByClassName('seat-btn');
+
 
 for (let seat of allSeats) {
     seat.addEventListener('click', function (e) {
@@ -6,25 +15,37 @@ for (let seat of allSeats) {
         const selectedSeatsCount = getElementNumberId('selected-seat-count');
         const seatName = e.target.innerText;
 
-        // set selected-Bg-color 
-        const selectedBtn = e.target;
-        selectedBtn.classList.add('bg-primaryColor')
+
+        // set selected total seats 
+        const newSelectedSeats = selectedSeatsCount + 1;
+        setElement('selected-seat-count', newSelectedSeats)
+
+        // maximum seat control control 
+        const totalSelectSeat = getElementNumberId('selected-seat-count');
+        if (totalSelectSeat > 4) {
+            alert('You are able to by maximum 4 tickets!')
+            setElement('selected-seat-count', newSelectedSeats - 1);
+            return;
+        }
+
 
 
         // set rest seats
         const newRestSeats = restSeats - 1;
         setElement('rest-seat', newRestSeats);
 
-        // set selected total seats 
-        const newSelectedSeats = selectedSeatsCount + 1;
-        setElement('selected-seat-count', newSelectedSeats)
-
+        // set selected-Bg-color 
+        const selectedBtn = e.target;
+        selectedBtn.classList.add('bg-primaryColor')
+        selectedBtn.classList.add('text-white')
 
         // seat details set and create function call
         seatDetails(seatName);
 
         // total price calculation
         totalPriceCalculation();
+
+        // couponButton();
 
     })
 }
@@ -37,20 +58,39 @@ function totalPriceCalculation() {
     setElement('grand-total', newTotalPrice);
 }
 
-// coupon calculation function
+
+// coupon calculation -----
+
 document.getElementById('coupon-btn').addEventListener('click', function () {
+    const discountContainer = document.getElementById('discount-total');
+    const couponCodeFieldContainer = document.getElementById('coupon-container');
     const couponField = document.getElementById('coupon-field');
     const couponCode = couponField.value;
     const totalPrice = getElementNumberId('total-price');
+
     if (couponCode === 'NEW15') {
         const discount = totalPrice * 15 / 100;
         const grandPrice = totalPrice - discount;
         setElement('grand-total', grandPrice);
+        discountContainer.innerHTML = `
+                     <p>Discount</p>
+                     <p>BDT <span>${discount}</span></p>
+            `
+        couponCodeFieldContainer.classList.add('hidden');
     }
     else if (couponCode === 'Couple 20') {
         const discount = totalPrice * 20 / 100;
         const grandPrice = totalPrice - discount;
         setElement('grand-total', grandPrice);
+        discountContainer.innerHTML = `
+                     <p>Discount Total</p>
+                     <p>BDT <span>${discount}</span></p>
+            `
+        couponCodeFieldContainer.classList.add('hidden');
+
+    }
+    else {
+        alert('Invalid Coupon !')
     }
 })
 
