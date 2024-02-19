@@ -46,15 +46,14 @@ for (let seat of allSeats) {
         // total price calculation
         totalPriceCalculation();
 
-        // couponButton();
-
     })
 }
 
 // total price calculation 
 function totalPriceCalculation() {
     const previousTotalPrice = getElementNumberId('total-price');
-    const newTotalPrice = previousTotalPrice + 550;
+    const perSeatPrice = getElementNumberId('per-seat-price');
+    const newTotalPrice = previousTotalPrice + perSeatPrice;
     setElement('total-price', newTotalPrice);
     setElement('grand-total', newTotalPrice);
 }
