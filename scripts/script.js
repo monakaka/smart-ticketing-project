@@ -170,3 +170,13 @@ function setElement(elementId, value) {
     const restSeatsBox = document.getElementById(elementId);
     restSeatsBox.innerText = value;
 };
+
+
+// document.getElementById('continue-btn').addEventListener('click', function () {
+//     console.log('ok');
+// })
+
+function refreshPage() {
+    // Use the location object to reload the page
+    location.reload();
+}
