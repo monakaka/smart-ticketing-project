@@ -23,7 +23,7 @@ for (let seat of allSeats) {
         // maximum seat control control 
         const totalSelectSeat = getElementNumberId('selected-seat-count');
         if (totalSelectSeat > 4) {
-            alert('You are able to by maximum 4 tickets!')
+            alert('You are able to buy maximum 4 tickets!')
             setElement('selected-seat-count', newSelectedSeats - 1);
             return;
         }
