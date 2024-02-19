@@ -160,7 +160,7 @@ document.getElementById('num-field').addEventListener('keyup', function (e) {
 
 // page refresh part 
 function refreshPage() {
-    location.reload();
+    window.location.href = window.location.href;
 }
 
 // get element with convert in number
