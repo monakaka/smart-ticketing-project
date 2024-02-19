@@ -423,7 +423,8 @@
                             <input type="text" class="w-full text-[#03071266] rounded-xl px-5 py-4" name=""
                                 id="coupon-field" placeholder="Have any coupon?">
                             <button id="coupon-btn"
-                                class="text-white font-semibold text-base rounded-xl px-4 py-2 bg-primaryColor absolute end-2 top-2 bottom-2">
+                                class="text-white font-semibold text-base rounded-xl px-4 py-2 bg-gray-300 absolute end-2 top-2 bottom-2"
+                                disabled>
                                 Apply
                             </button>
                         </div>
@@ -460,9 +461,9 @@
                                 class="w-full border border-[#0307121A] rounded-xl text-[#03071266] font-inter text-base mt-4 p-5"
                                 name="" id="" placeholder="Enter your email Id">
                         </div>
-                        <button
-                            class="font-raleway font-extrabold text-xl text-white bg-primaryColor w-full py-5 px-8 rounded-2xl"
-                            onclick="my_modal_4.showModal()">Next</button>
+                        <!-- modal  -->
+                        <button id="next-btn"
+                            class="font-raleway font-extrabold text-xl text-white bg-gray-300 w-full py-5 px-8 rounded-2xl pointer-events-none">Next</button>
                         <dialog id="my_modal_4" class="modal">
                             <div class="modal-box w-11/12 max-w-5xl">
                                 <div class="w-6/12 space-y-4 mx-auto text-center">

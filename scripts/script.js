@@ -1,26 +1,38 @@
-// buy tickets btn navigation 
+// buy tickets btn navigation
 document.getElementById('buy-ticket-btn').addEventListener('click', function () {
     const paribahan = document.getElementById('paribahan');
     paribahan.scrollIntoView({ behavior: "smooth" });
 })
 
 
-// seats click function 
+// seats click function
 const allSeats = document.getElementsByClassName('seat-btn');
 
-
+let counter = 0;
 for (let seat of allSeats) {
     seat.addEventListener('click', function (e) {
         const restSeats = getElementNumberId('rest-seat');
         const selectedSeatsCount = getElementNumberId('selected-seat-count');
         const seatName = e.target.innerText;
 
+        //  counter iteration part 
+        counter++
 
-        // set selected total seats 
+        // coupon btn enable part
+        const couponBtn = document.getElementById('coupon-btn');
+
+        if (counter === 4) {
+            couponBtn.classList.remove('bg-gray-300');
+            couponBtn.classList.add('bg-primaryColor');
+            couponBtn.removeAttribute('disabled');
+        }
+
+
+        // set selected total seats
         const newSelectedSeats = selectedSeatsCount + 1;
         setElement('selected-seat-count', newSelectedSeats)
 
-        // maximum seat control control 
+        // maximum seat control control
         const totalSelectSeat = getElementNumberId('selected-seat-count');
         if (totalSelectSeat > 4) {
             alert('You are able to buy maximum 4 tickets!')
@@ -29,12 +41,11 @@ for (let seat of allSeats) {
         }
 
 
-
         // set rest seats
         const newRestSeats = restSeats - 1;
         setElement('rest-seat', newRestSeats);
 
-        // set selected-Bg-color 
+        // set selected-Bg-color
         const selectedBtn = e.target;
         selectedBtn.classList.add('bg-primaryColor');
         selectedBtn.classList.add('text-white');
@@ -46,10 +57,11 @@ for (let seat of allSeats) {
         // total price calculation
         totalPriceCalculation();
 
+
     })
 }
 
-// total price calculation 
+// total price calculation
 function totalPriceCalculation() {
     const previousTotalPrice = getElementNumberId('total-price');
     const perSeatPrice = getElementNumberId('per-seat-price');
@@ -106,14 +118,32 @@ function seatDetails(seatName) {
     div.innerHTML = `
             <p>${seatName}</p>
             <p>Economy</p>
-            <p>550</p>         
+            <p>550</p>
         `
     seatDetailsContainer.appendChild(div);
 }
 
+// next button enable part 
+
+document.getElementById('num-field').addEventListener('keyup', function (e) {
+    const phnNumber = document.getElementById('num-field').value;
+    const selectedSeat = getElementNumberId('selected-seat-count');
+    const nextBtn = document.getElementById('next-btn');
+    const value = parseInt(e.key);
+    if ((!isNaN(value) || phnNumber) && selectedSeat > 0) {
+        nextBtn.classList.remove('bg-gray-300');
+        nextBtn.classList.remove('pointer-events-none');
+        nextBtn.classList.add('bg-primaryColor')
+        nextBtn.addEventListener('click', function () {
+            my_modal_4.showModal();
+        });
+    }
+
+});
 
 
-// if i want a element with convert in number 
+
+// if i want a element with convert in number
 function getElementNumberId(id) {
     const element = document.getElementById(id);
     const elementCount = parseInt(element.innerText);
@@ -121,8 +151,9 @@ function getElementNumberId(id) {
 }
 
 
-// set element 
+// set element
 function setElement(elementId, value) {
     const restSeatsBox = document.getElementById(elementId);
     restSeatsBox.innerText = value;
 }
+
