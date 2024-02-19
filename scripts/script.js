@@ -58,6 +58,23 @@ for (let seat of allSeats) {
         totalPriceCalculation();
 
 
+
+        // ----------------------------------------------------------------------------------------
+
+        // const phnNumber = document.getElementById('num-field').value;
+        // const selectedSeat = getElementNumberId('selected-seat-count');
+        // const nextBtn = document.getElementById('next-btn');
+        // const value = parseInt(e.key);
+        // if ((!isNaN(value) || phnNumber) && selectedSeat > 0) {
+        //     nextBtn.classList.remove('bg-gray-300');
+        //     nextBtn.classList.remove('pointer-events-none');
+        //     nextBtn.classList.add('bg-primaryColor')
+        //     nextBtn.addEventListener('click', function () {
+        //         my_modal_4.showModal();
+        //     });
+        // }
+        // ---------------------------------------------------------------------------------------------
+
     })
 }
 
@@ -137,6 +154,11 @@ document.getElementById('num-field').addEventListener('keyup', function (e) {
         nextBtn.addEventListener('click', function () {
             my_modal_4.showModal();
         });
+    }
+    else {
+        nextBtn.classList.add('bg-gray-300');
+        nextBtn.classList.add('pointer-events-none');
+        nextBtn.classList.remove('bg-primaryColor')
     }
 
 });
