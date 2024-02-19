@@ -158,6 +158,11 @@ document.getElementById('num-field').addEventListener('keyup', function (e) {
 
 });
 
+// page refresh part 
+function refreshPage() {
+    location.reload();
+}
+
 // get element with convert in number
 function getElementNumberId(id) {
     const element = document.getElementById(id);
@@ -171,12 +176,3 @@ function setElement(elementId, value) {
     restSeatsBox.innerText = value;
 };
 
-
-// document.getElementById('continue-btn').addEventListener('click', function () {
-//     console.log('ok');
-// })
-
-function refreshPage() {
-    // Use the location object to reload the page
-    location.reload();
-}
